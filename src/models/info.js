@@ -17,7 +17,7 @@ const Info = sequelize.define(
             allowNull: false,
         },
         number: {
-            type: Sequelize.INTEGER,
+            type: Sequelize.STRING,
             allowNull: false,
         },
         email: {
