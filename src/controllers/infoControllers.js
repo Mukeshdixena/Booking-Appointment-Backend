@@ -28,8 +28,8 @@ exports.postInfo = (req, res, next) => {
 };
 
 exports.deleteInfo = (req, res, next) => {
-    const { infoId } = req.parms;
-
+    const { infoId } = req.params;
+    console.log(infoId);
     if (!infoId) {
         return res.status(400).json({ message: 'infoId is required' });
     }
