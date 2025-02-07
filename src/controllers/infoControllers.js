@@ -3,7 +3,7 @@ const Info = require('../models/info');
 exports.getInfo = (req, res, next) => {
     Info.findAll()
         .then(info => {
-            res.status(200).json({ message: 'Fetched Info successfully!', data: info });
+            res.status(200).json(info);
         })
         .catch(err => {
             console.error(err);
@@ -19,7 +19,7 @@ exports.postInfo = (req, res, next) => {
         email: email,
     })
         .then(result => {
-            res.status(201).json({ message: 'Info created successfully!', data: result });
+            res.status(201).json(result);
         })
         .catch(err => {
             console.error(err);
